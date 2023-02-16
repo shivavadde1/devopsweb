@@ -6,9 +6,7 @@ pipeline{
   stages{
      stage ('Build'){
        steps{
-          set +e
-           bat 'clear mvn package'
-            
+          bat 'cls mvn package'   
        }
        post{
           success{
