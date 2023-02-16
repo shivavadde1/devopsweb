@@ -8,12 +8,7 @@ pipeline{
        steps{
           bat 'cls mvn package'   
        }
-       post{
-          success{
-              echo "Archiving the Artifacts"
-          archiveArtifacts artifacts: '**/target/*.war'
-         }
-     }
+       
    }
 stage ('Deploy to tomcat server') {
      steps{
